@@ -16,20 +16,23 @@
 	<body>
 		<main>
 			<div class="container flex-column">
-				<section class="brand">
+				<section class="brand flex pink">
 					<img
-						src=""
+						src="./assets/icons/logo.svg"
 						alt=""
 					/>
 					<h1 id="brand-name">Numbers</h1>
 				</section>
 
-				<header>
+				<header class="cream">
 					<h4>ONLINE - GRATUITO</h4>
 					<h1>SORTEADOR DE NÚMEROS</h1>
 				</header>
 
-				<section id="sort-content">
+				<section
+					id="sort-content"
+					class="blue"
+				>
 					<h3>QUERO SORTEAR:</h3>
 					<p>
 						Defina o intervalo e a quantidade de números, clique em "Sortear" e
@@ -40,40 +43,58 @@
 						<div class="fields">
 							<div class="number-field">
 								<label for=""></label>
-								<input type="text" />
+
+								<div class="rainbow-outline">
+									<input type="number" />
+								</div>
 							</div>
+
 							<div class="number-field">
 								<label for=""></label>
-								<input type="text" />
+
+								<div class="rainbow-outline">
+									<input type="number" />
+								</div>
 							</div>
+
 							<div class="number-field">
 								<label for=""></label>
-								<input type="text" />
+
+								<div class="rainbow-outline">
+									<input type="number" />
+								</div>
 							</div>
 						</div>
 
-						<div class="toggle-container">
+						<div class="switch-container">
 							<label class="switch">
 								<input
 									type="checkbox"
 									id="noRepeat"
 								/>
+
 								<span class="slider round"></span>
 							</label>
+
 							<span>Não repetir números</span>
 						</div>
 
-						<div class="submit-wrapper">
-							SORTEAR
-							<img
-								src=""
-								alt=""
-							/>
+						<div class="container-button">
+							<button type="submit">
+								SORTEAR
+								<img
+									src="./assets/icons/arrow-right.svg"
+									alt=""
+								/>
+							</button>
 						</div>
 					</form>
 				</section>
 
-				<section id="questions">
+				<section
+					id="questions"
+					class="green"
+				>
 					<div class="question-item">
 						<img
 							src=""
@@ -100,7 +121,7 @@
 				</section>
 			</div>
 
-			<div class="container-result displayNone">
+			<div class="container-result displayNone pink">
 				<h2>RESULTADO DO SORTEIO</h2>
 				<small><span></span>º resultado</small>
 

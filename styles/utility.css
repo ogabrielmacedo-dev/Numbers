@@ -1,0 +1,28 @@
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	align-items: center;
+}
+
+.pink {
+	background-color: deeppink;
+}
+
+.blue {
+	background-color: rgba(46, 46, 155, 0.89);
+}
+
+.green {
+	background-color: rgb(20, 73, 20);
+}
+
+.cream {
+	background-color: rgb(226, 159, 71);
+}
