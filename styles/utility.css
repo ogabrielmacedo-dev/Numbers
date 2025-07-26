@@ -1,3 +1,7 @@
+.py {
+	margin-block: 2.5rem;
+}
+
 .flex {
 	display: flex;
 }
@@ -7,8 +11,16 @@
 	flex-direction: column;
 }
 
-.container {
+.align-center {
 	align-items: center;
+}
+
+.container {
+	--max-width: 23.75rem;
+	--px: 2rem;
+	align-items: center;
+	margin-inline: auto;
+	width: min(var(--max-width), 100% - var(--px) * 2);
 }
 
 .pink {

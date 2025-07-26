@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Numbers</title>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+			rel="stylesheet"
+		/>
 
 		<link
 			rel="stylesheet"
@@ -16,7 +31,7 @@
 	<body>
 		<main>
 			<div class="container flex-column">
-				<section class="brand flex pink">
+				<section class="brand flex align-center py">
 					<img
 						src="./assets/icons/logo.svg"
 						alt=""
@@ -24,14 +39,14 @@
 					<h1 id="brand-name">Numbers</h1>
 				</section>
 
-				<header class="cream">
-					<h4>ONLINE - GRATUITO</h4>
-					<h1>SORTEADOR DE NÚMEROS</h1>
+				<header id="header">
+					<h4>Online - gratuito</h4>
+					<h1>Sorteador de números</h1>
 				</header>
 
 				<section
 					id="sort-content"
-					class="blue"
+					class="py"
 				>
 					<h3>QUERO SORTEAR:</h3>
 					<p>
@@ -41,27 +56,36 @@
 
 					<form action="">
 						<div class="fields">
-							<div class="number-field">
-								<label for=""></label>
+							<div class="number-field flex-column">
+								<label for="qnt">Números</label>
 
 								<div class="rainbow-outline">
-									<input type="number" />
+									<input
+										type="number"
+										id="qnt"
+									/>
 								</div>
 							</div>
 
-							<div class="number-field">
-								<label for=""></label>
+							<div class="number-field flex-column">
+								<label for="min">de</label>
 
 								<div class="rainbow-outline">
-									<input type="number" />
+									<input
+										type="number"
+										id="min"
+									/>
 								</div>
 							</div>
 
-							<div class="number-field">
-								<label for=""></label>
+							<div class="number-field flex-column">
+								<label for="max">até</label>
 
 								<div class="rainbow-outline">
-									<input type="number" />
+									<input
+										type="number"
+										id="max"
+									/>
 								</div>
 							</div>
 						</div>
@@ -101,10 +125,10 @@
 							alt=""
 						/>
 						<strong>Como funciona o sorteador de números?</strong>
-						<p>
+						<small>
 							O sorteador utiliza um algoritmo de geração aleatória para criar
 							números dentro do intervalo especificado pelo usuário.
-						</p>
+						</small>
 					</div>
 
 					<div class="question-item">
@@ -113,10 +137,10 @@
 							alt=""
 						/>
 						<strong>Posso escolher o intervalo dos números?</strong>
-						<p>
+						<small>
 							Sim, você pode definir os valores mínimo e máximo para o intervalo
 							dos números sorteados.
-						</p>
+						</small>
 					</div>
 				</section>
 			</div>
