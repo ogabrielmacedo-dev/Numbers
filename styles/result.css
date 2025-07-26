@@ -1,0 +1,83 @@
+#section-result {
+	width: 100%;
+	text-align: center;
+
+	& > div:first-of-type {
+		& .container-button {
+			margin-top: 2rem;
+			& button {
+				position: relative;
+				z-index: 0;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 3.5rem;
+				background: var(--background-tertiary);
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				overflow: hidden;
+				padding: 0 1.5rem;
+				transition: background-color 0.4s ease;
+
+				.play-button {
+					position: relative;
+					width: 40px;
+					height: 100%;
+
+					.icon,
+					.circle {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+
+					.circle {
+						transition: transform 0.5s ease;
+					}
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					inset: -2px;
+					background: linear-gradient(270deg, #d586e0, #91a1fa, #d586e0);
+					background-size: 600%;
+					border-radius: inherit;
+					z-index: -2;
+					opacity: 0;
+					transition: opacity 0.3s ease;
+					pointer-events: none;
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					inset: 2px;
+					background: var(--background-tertiary);
+					border-radius: inherit;
+					z-index: -1;
+					pointer-events: none;
+				}
+
+				&:hover::before {
+					animation: borderRainbow 4s linear infinite;
+					opacity: 1;
+				}
+			}
+			&:hover .circle {
+				animation: rotateCircle 1s linear infinite;
+			}
+		}
+	}
+}
+@keyframes rotateCircle {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}

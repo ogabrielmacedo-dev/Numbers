@@ -1,0 +1,24 @@
+#questions {
+	& .question-item {
+		gap: 0.3rem;
+		& img {
+			place-self: start;
+		}
+
+		& strong {
+			margin-top: 2px;
+			font: var(--paragraph-md);
+			color: var(--content-brand);
+		}
+
+		& small {
+			font: var(--paragraph-sm);
+			color: var(--content-secondary);
+		}
+
+		&:last-child {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+}

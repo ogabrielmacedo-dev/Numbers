@@ -115,57 +115,71 @@
 					</form>
 				</section>
 
-				<section
-					id="questions"
-					class="green"
-				>
-					<div class="question-item">
+				<section id="questions">
+					<div class="question-item flex">
 						<img
-							src=""
-							alt=""
+							src="./assets/icons/person.svg"
+							alt="person-icon"
 						/>
-						<strong>Como funciona o sorteador de números?</strong>
-						<small>
-							O sorteador utiliza um algoritmo de geração aleatória para criar
-							números dentro do intervalo especificado pelo usuário.
-						</small>
+						<div class="flex-column">
+							<strong>Como funciona o sorteador de números?</strong>
+							<small>
+								O sorteador utiliza um algoritmo de geração aleatória para criar
+								números dentro do intervalo especificado pelo usuário.
+							</small>
+						</div>
 					</div>
 
-					<div class="question-item">
+					<div class="question-item flex">
 						<img
-							src=""
-							alt=""
+							src="./assets/icons/person.svg"
+							alt="person-icon"
 						/>
-						<strong>Posso escolher o intervalo dos números?</strong>
-						<small>
-							Sim, você pode definir os valores mínimo e máximo para o intervalo
-							dos números sorteados.
-						</small>
+						<div class="flex-column">
+							<strong>Posso escolher o intervalo dos números?</strong>
+							<small>
+								Sim, você pode definir os valores mínimo e máximo para o
+								intervalo dos números sorteados.
+							</small>
+						</div>
 					</div>
 				</section>
-			</div>
 
-			<div class="container-result displayNone pink">
-				<h2>RESULTADO DO SORTEIO</h2>
-				<small><span></span>º resultado</small>
+				<section
+					id="section-result"
+					class=""
+				>
+					<div class="flex-column">
+						<h3>RESULTADO DO SORTEIO</h3>
+						<p><span></span>º resultado</p>
 
-				<div class="result">
-					<!-- <label>23</label>
-                    <label>12</label> -->
-				</div>
+						<div class="result">
+							<!-- <label>23</label>
+                    		<label>12</label> -->
+						</div>
 
-				<div class="container-button">
-					<button
-						type="submit"
-						id="draw-again"
-					>
-						SORTEAR NOVAMENTE
-						<img
-							src="./assets/icons/arrow-update.svg"
-							alt=""
-						/>
-					</button>
-				</div>
+						<div class="container-button">
+							<button
+								type="submit"
+								id="draw-again"
+							>
+								<p>SORTEAR NOVAMENTE</p>
+								<div class="play-button">
+									<img
+										src="./assets/icons/play-symbol.svg"
+										alt="#"
+										class="icon"
+									/>
+									<img
+										src="./assets/icons/circle-arrow.svg"
+										alt="#"
+										class="circle"
+									/>
+								</div>
+							</button>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main>
 
