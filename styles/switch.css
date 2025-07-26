@@ -1,7 +1,13 @@
 .switch-container {
 	align-items: center;
 	margin-top: 1rem;
-	.switch {
+	gap: 0.5rem;
+
+	& span {
+		font: var(--paragraph-md);
+	}
+
+	& .switch {
 		position: relative;
 		display: inline-block;
 		width: 50px;
@@ -54,9 +60,5 @@
 		& input:checked + .slider::before {
 			transform: translateX(22px);
 		}
-	}
-
-	& span {
-		font: var(--content-primary);
 	}
 }

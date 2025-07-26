@@ -18,9 +18,17 @@ form {
 				background: transparent;
 
 				&:hover {
-					background: linear-gradient(90deg, var(--gradient-border));
+					background: var(--gradient-border);
 
 					& input {
+						background: #24222e;
+					}
+				}
+
+				&:focus-within {
+					background: var(--gradient-border);
+
+					input {
 						background: #24222e;
 					}
 				}
@@ -38,5 +46,85 @@ form {
 				}
 			}
 		}
+	}
+
+	& .container-button {
+		width: 100%;
+		margin-top: 2rem;
+
+		& button:hover img {
+			animation: moveArrow 1s ease-in-out infinite;
+		}
+
+		& button {
+			position: relative;
+			z-index: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 3.5rem;
+			background: var(--background-tertiary);
+			border: none;
+			border-radius: 8px;
+			gap: 1rem;
+			cursor: pointer;
+			overflow: hidden;
+			padding: 0 1.5rem;
+			transition: background-color 0.4s ease;
+
+			& p {
+				font: var(--label-md);
+				color: white;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: -2px;
+				background: linear-gradient(270deg, #d586e0, #91a1fa, #d586e0);
+				background-size: 600%;
+				border-radius: inherit;
+				z-index: -2;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+				pointer-events: none;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 2px;
+				background: var(--background-tertiary);
+				border-radius: inherit;
+				z-index: -1;
+				pointer-events: none;
+			}
+
+			&:hover::before {
+				animation: borderRainbow 4s linear infinite;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@keyframes borderRainbow {
+	0% {
+		background-position: 0% center;
+	}
+	100% {
+		background-position: 400% center;
+	}
+}
+
+@keyframes moveArrow {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(8px);
 	}
 }
