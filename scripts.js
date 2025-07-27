@@ -10,9 +10,7 @@ form.onsubmit = (e) => {
 	const numbersAmount = document.getElementById("qnt").valueAsNumber;
 	const minValue = document.getElementById("min").valueAsNumber;
 	const maxValue = document.getElementById("max").valueAsNumber;
-	const btnNoRepeat = document.getElementById("noRepeat").checked;
-
-	range = maxValue - (minValue - 1);
+	const btnNoRepeatNumbers = document.getElementById("noRepeatNumbers").checked;
 
 	// Verificando se o valor mínimo é maior ou igual ao valor máximo.
 	if (minValue > maxValue) {
@@ -20,24 +18,20 @@ form.onsubmit = (e) => {
 		return;
 	}
 
-	// Verificando o switch de repetição
-	if (!btnNoRepeat) {
-		let chosenNumbers = drawNumbers(numbersAmount, minValue, maxValue);
-		console.log(chosenNumbers);
-		showResult(chosenNumbers);
-	} else {
-		// Verificando a quantidade de números com a quantidade no intervalo
-		if (range < numbersAmount) {
-			alert(
-				"Quantidade de números no intervalo inferior à quantidade desejada para o sorteio. Por favor, insira um intervalo válido."
-			);
-			return;
-		}
+	range = maxValue - (minValue - 1);
 
-		let chosenNumbers = drawNumbersNoRepeat(numbersAmount, minValue, maxValue);
-		console.log(chosenNumbers);
-		showResult(chosenNumbers);
+	// Verifica se o range permite sortear
+	if (btnNoRepeatNumbers && range < numbersAmount) {
+		return alert(
+			"Quantidade de números no intervalo inferior à quantidade desejada para o sorteio. Por favor, insira um intervalo válido."
+		);
 	}
+
+	const chosenNumbers = btnNoRepeatNumbers
+		? drawNumbersNoRepeat(numbersAmount, minValue, maxValue)
+		: drawNumbers(numbersAmount, minValue, maxValue);
+
+	showResult(chosenNumbers);
 };
 
 // Função para sortear os números, incluindo números repetidos.
