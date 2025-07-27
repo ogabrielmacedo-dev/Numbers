@@ -106,7 +106,7 @@ function showResult(chosenNumbers) {
 			// aparece o texto
 			setTimeout(() => {
 				numberText.classList.add("show-text");
-			}, 1000);
+			}, 400);
 
 			// remove o square
 			setTimeout(() => {

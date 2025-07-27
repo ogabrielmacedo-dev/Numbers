@@ -27,23 +27,22 @@
 				background-color: var(--content-brand);
 				color: var(--content-inverse);
 				border-radius: 28px;
-				animation: showSquare 2s ease-in-out forwards;
+				animation: showSquare 2.5s ease-in-out forwards;
 			}
 
 			/* Texto invisível inicialmente */
 			.number-text {
 				position: relative;
-				opacity: 0;
+				opacity: 1;
 				z-index: 2;
 				font-weight: bold;
-				font-size: 3rem;
+				font-size: 4rem;
 				font-weight: bold;
 			}
 
 			/* Quando ativado, o texto aparece */
 			.show-text {
-				animation: fadeInText 2.3s ease-in forwards;
-				font-size: 4rem;
+				animation: fadeInText 3s ease-in forwards;
 			}
 		}
 
@@ -128,24 +127,33 @@
 
 @keyframes showSquare {
 	0% {
-		transform: rotate(0deg) scale(0.9);
+		transform: rotate(0deg) scale(1);
 	}
 
 	50% {
-		transform: rotate(180deg) scale(1.2);
+		transform: rotate(360deg) scale(1.1);
 	}
 	100% {
-		transform: rotate(360deg) scale(1);
-		opacity: 1;
+		transform: rotate(360deg) scale(0.8);
 	}
 }
 
 @keyframes fadeInText {
-	from {
+	0% {
 		opacity: 1;
 		color: black;
+		transform: scale(1);
 	}
-	to {
+
+	20% {
+		transform: scale(1.1);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
 		opacity: 1;
 	}
 }
