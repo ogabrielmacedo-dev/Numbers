@@ -4,6 +4,17 @@
 
 	& > div:first-of-type {
 		margin-top: 2rem;
+
+		& > h3 {
+			color: var(--content-brand);
+		}
+
+		& > p {
+			font: var(--overline);
+			color: var(--content-secondary);
+			text-transform: uppercase;
+		}
+
 		& .result {
 			padding-block: 3.5rem;
 

@@ -26,19 +26,3 @@
 	margin-inline: auto;
 	width: min(var(--max-width), 100% - var(--px) * 2);
 }
-
-.pink {
-	background-color: deeppink;
-}
-
-.blue {
-	background-color: rgba(46, 46, 155, 0.89);
-}
-
-.green {
-	background-color: rgb(20, 73, 20);
-}
-
-.cream {
-	background-color: rgb(226, 159, 71);
-}

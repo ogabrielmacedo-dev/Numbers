@@ -88,11 +88,16 @@ function showResult(chosenNumbers) {
 
 	chosenNumbers.forEach((num, index) => {
 		setTimeout(() => {
+			let totalDraw = index + 1;
+
+			const spanTotal = document.getElementById("totalDraw");
+			spanTotal.textContent = totalDraw;
+
 			// cria o "container result"
 			const itemResult = document.createElement("label");
 			itemResult.classList.add("item-result");
 
-			// cria o quadrado animado
+			// cria o square
 			const square = document.createElement("div");
 			square.classList.add("square");
 			itemResult.appendChild(square);
