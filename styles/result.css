@@ -3,6 +3,7 @@
 	text-align: center;
 
 	& > div:first-of-type {
+		margin-top: 2rem;
 		& .result {
 			padding-block: 3.5rem;
 

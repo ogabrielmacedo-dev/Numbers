@@ -2,6 +2,7 @@
 const drawContent = document.getElementById("draw-content");
 const form = document.querySelector("form");
 const resultContent = document.getElementById("section-result");
+const questionsContent = document.getElementById("questions");
 
 form.onsubmit = (e) => {
 	e.preventDefault();
@@ -82,6 +83,7 @@ function showResult(chosenNumbers) {
 	resultContainer.innerHTML = "";
 
 	drawContent.classList.toggle("hidden");
+	questionsContent.classList.toggle("hidden");
 	resultContent.classList.toggle("hidden");
 
 	chosenNumbers.forEach((num, index) => {
