@@ -47,7 +47,7 @@
 		}
 
 		& .container-button {
-			margin-top: 2rem;
+			margin-block: 2rem;
 			& button {
 				position: relative;
 				z-index: 0;
